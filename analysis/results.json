@@ -1,0 +1,299 @@
+{
+  "L1": {
+    "profile": [
+      {
+        "table": "engineering_documents",
+        "rows": 2400,
+        "columns": 10,
+        "null_cells_pct": 0.8,
+        "duplicate_keys": 0,
+        "date_from": "2024-01-08",
+        "date_to": "2026-07-22"
+      },
+      {
+        "table": "rfis",
+        "rows": 1849,
+        "columns": 9,
+        "null_cells_pct": 0.2,
+        "duplicate_keys": 0,
+        "date_from": "2024-06-07",
+        "date_to": "2026-06-29"
+      },
+      {
+        "table": "purchase_orders",
+        "rows": 1600,
+        "columns": 7,
+        "null_cells_pct": 1.9,
+        "duplicate_keys": 0,
+        "date_from": "2024-02-11",
+        "date_to": "2026-06-29"
+      },
+      {
+        "table": "punch_items",
+        "rows": 6200,
+        "columns": 7,
+        "null_cells_pct": 1.5,
+        "duplicate_keys": 0,
+        "date_from": "2025-07-01",
+        "date_to": "2026-06-29"
+      },
+      {
+        "table": "ncrs",
+        "rows": 380,
+        "columns": 6,
+        "null_cells_pct": 0.6,
+        "duplicate_keys": 0,
+        "date_from": "2024-09-01",
+        "date_to": "2026-06-26"
+      },
+      {
+        "table": "ev_monthly",
+        "rows": 1344,
+        "columns": 5,
+        "null_cells_pct": 11.4,
+        "duplicate_keys": 0,
+        "date_from": "2024-01-31",
+        "date_to": "2027-06-30"
+      }
+    ],
+    "checks": [
+      {
+        "rule": "Approved before first submittal",
+        "violations": 0
+      },
+      {
+        "rule": "RFI answered before raised",
+        "violations": 0
+      },
+      {
+        "rule": "PO promised before PO date",
+        "violations": 0
+      },
+      {
+        "rule": "Non-positive PO value",
+        "violations": 0
+      },
+      {
+        "rule": "Punch closed before raised",
+        "violations": 0
+      },
+      {
+        "rule": "Events after data date",
+        "violations": 0
+      },
+      {
+        "rule": "Earned value above budget",
+        "violations": 0
+      }
+    ],
+    "total_rows": 13805
+  },
+  "L2": {
+    "chi2": 86.1,
+    "chi2_dof": 14,
+    "chi2_p": 2.067828457830296e-12,
+    "cramers_v": 0.135,
+    "worst_code3": {
+      "Piping": 4.3,
+      "I&C": 2.9
+    },
+    "kw_h": 70.2,
+    "kw_p": 1.338234754546007e-12,
+    "median_high": 6.0,
+    "median_low": 13.0,
+    "mw_p": 8.171162331326571e-47,
+    "spearman_rho": -0.36,
+    "spearman_p": 0.385,
+    "rfis_per_doc": {
+      "Civil": 0.83,
+      "Piping": 0.81,
+      "Structural": 0.77,
+      "Electrical": 0.77,
+      "Mechanical": 0.76,
+      "I&C": 0.75,
+      "Architectural": 0.71,
+      "Fire Protection": 0.62
+    }
+  },
+  "L3": {
+    "es_months": 28.72,
+    "at_months": 30,
+    "spi_t": 0.957,
+    "spi_cost": 0.932,
+    "planned_duration": 42,
+    "ieac_t_months": 43.9,
+    "finish_planned": "Jun 2027",
+    "finish_forecast": "Aug 2027",
+    "slip_months": 1.9,
+    "eac": {
+      "CPI method (BAC / CPI)": 5.009,
+      "Composite (AC + (BAC - EV) / (CPI x SPI))": 5.125,
+      "Remaining at plan rate (AC + BAC - EV)": 4.949
+    },
+    "bac": 4.817
+  },
+  "L4_cost": {
+    "runs": 10000,
+    "p10": 4.953,
+    "p50": 5.0,
+    "p80": 5.032,
+    "p90": 5.05,
+    "bac": 4.817,
+    "prob_within_bac": 0.0,
+    "contingency_p80_musd": 215
+  },
+  "L4_punch": {
+    "runs": 5000,
+    "p10": "04 Oct 2026",
+    "p50": "25 Oct 2026",
+    "p80": "06 Dec 2026",
+    "p90": "10 Jan 2027",
+    "linear": "14 Mar 2027",
+    "faster_p50": "13 Sep 2026",
+    "faster_p80": "27 Sep 2026",
+    "weeks_saved_p80": 10,
+    "no_taper_p50": "28 Mar 2027",
+    "no_taper_p80": "30 May 2027",
+    "recent_raised_per_week": 140.4,
+    "recent_closed_per_week": 157.7
+  },
+  "L5": {
+    "by_priority": {
+      "High": {
+        "n": 377,
+        "censored": 1,
+        "answered_by_target_pct": 44.3,
+        "target_days": 5,
+        "median_days": 6,
+        "p90_days": 11
+      },
+      "Medium": {
+        "n": 1013,
+        "censored": 17,
+        "answered_by_target_pct": 56.0,
+        "target_days": 10,
+        "median_days": 9,
+        "p90_days": 22
+      },
+      "Low": {
+        "n": 459,
+        "censored": 19,
+        "answered_by_target_pct": 55.0,
+        "target_days": 14,
+        "median_days": 13,
+        "p90_days": 33
+      }
+    },
+    "open_censored": 37,
+    "naive_median": {
+      "High": 6.0,
+      "Low": 13.0,
+      "Medium": 9.0
+    }
+  },
+  "L6": {
+    "train_n": 948,
+    "test_n": 443,
+    "cutoff": "01 Oct 2025",
+    "auc": {
+      "Logistic regression": 0.596,
+      "Gradient boosting": 0.549,
+      "Gradient boosting with LEAKY feature": 0.736
+    },
+    "best": "Logistic regression",
+    "base_rate": 0.151,
+    "top20_rate": 0.227,
+    "lift": 1.5,
+    "capture_top20": 0.299,
+    "importance": {
+      "supplier_prior_late_rate": 0.045,
+      "category (all dummies)": 0.037,
+      "supplier_prior_pos": 0.01,
+      "log_value": 0.009,
+      "lead_days": 0.004,
+      "month_index": -0.001
+    }
+  },
+  "L7": {
+    "silhouette": {
+      "2": 0.227,
+      "3": 0.24,
+      "4": 0.271,
+      "5": 0.274,
+      "6": 0.266
+    },
+    "k": 4,
+    "clusters": [
+      {
+        "cluster": 0,
+        "cluster_name": "Inactive",
+        "suppliers": 13,
+        "median_spend_musd": 1.1,
+        "median_pos": 3.0,
+        "median_recency_days": 421.0,
+        "median_tenure_days": 721.0,
+        "mean_otd_pct": 92.6
+      },
+      {
+        "cluster": 1,
+        "cluster_name": "Delivery risk",
+        "suppliers": 44,
+        "median_spend_musd": 5.3,
+        "median_pos": 5.0,
+        "median_recency_days": 80.5,
+        "median_tenure_days": 632.5,
+        "mean_otd_pct": 59.1
+      },
+      {
+        "cluster": 2,
+        "cluster_name": "Core high-volume",
+        "suppliers": 38,
+        "median_spend_musd": 23.1,
+        "median_pos": 17.0,
+        "median_recency_days": 27.0,
+        "median_tenure_days": 742.5,
+        "mean_otd_pct": 88.0
+      },
+      {
+        "cluster": 3,
+        "cluster_name": "Steady mid-tier",
+        "suppliers": 45,
+        "median_spend_musd": 2.6,
+        "median_pos": 4.0,
+        "median_recency_days": 65.0,
+        "median_tenure_days": 435.0,
+        "mean_otd_pct": 94.6
+      }
+    ],
+    "anomalies": 16,
+    "anomaly_examples": [
+      {
+        "po_no": "PO-00994",
+        "category": "Exhaust & Abatement",
+        "po_value": 64921200.0,
+        "lead_days": 277
+      },
+      {
+        "po_no": "PO-00646",
+        "category": "HVAC & Air Handling",
+        "po_value": 12161900.0,
+        "lead_days": 295
+      },
+      {
+        "po_no": "PO-00723",
+        "category": "HVAC & Air Handling",
+        "po_value": 36100.0,
+        "lead_days": 294
+      }
+    ]
+  },
+  "L8": {
+    "excess_code3": 89,
+    "resubmittal_cycles_avoided": 182,
+    "base_code3_pct": 16.2,
+    "pi_code3_pct": 28.7,
+    "fab_cpi": 0.96,
+    "fab_remaining_busd": 0.8,
+    "fab_saving_musd": 17
+  }
+}

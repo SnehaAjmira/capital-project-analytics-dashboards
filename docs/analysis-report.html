@@ -1,0 +1,772 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EPC Project Analysis Report</title><style>body{margin:0;background:#fcfcfb;color:#0b0b0b;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+main{max-width:980px;margin:0 auto;padding:24px 28px 60px} h1{font-size:28px;margin-top:8px} h2{margin-top:40px;border-bottom:1px solid #e4e3df;padding-bottom:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;background:#fff} th,td{border:1px solid #e4e3df;padding:6px 10px;text-align:left;vertical-align:top}
+th{background:#f3f3f1} img{max-width:100%;border:1px solid #e4e3df;border-radius:6px;background:#fff;margin:8px 0}
+code{background:#f0efec;padding:1px 5px;border-radius:4px} nav{font-size:13px;margin-bottom:8px} nav a{color:#2a78d6}</style></head><body><main>
+<nav><a href="index.html">Dashboards</a> | <a href="https://github.com/SnehaAjmira/epc-project-analytics-dashboards">Source code</a></nav><h1>EPC Project Analysis Report: From Descriptive to Predictive</h1>
+<p>End-to-end analysis of a semiconductor fab EPC project, building from data profiling to simulation, survival analysis, and machine learning. Each level answers a harder question than the one before it.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scope</strong></td>
+<td>13,805 records across 7 tables: earned value, engineering documents, RFIs, purchase orders, punch items, NCRs</td>
+</tr>
+<tr>
+<td><strong>Data date</strong></td>
+<td>30 Jun 2026 (month 30 of a 42-month plan)</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>SQL (DuckDB), Python, pandas, SciPy, scikit-learn, matplotlib</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>Synthetic. Generated from a fixed seed; no real project, client, or company data.</td>
+</tr>
+<tr>
+<td><strong>Reproduce</strong></td>
+<td><code>python src/advanced_analysis.py &amp;&amp; python src/write_report.py</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Executive Summary</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Finding</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The project is about 1.3 months behind schedule. Earned schedule forecasts completion in <strong>Aug 2027</strong> vs a planned Jun 2027.</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Simulated cost at completion is <strong>$5.00B (P50)</strong> to $5.05B (P90) against a $4.82B budget. The chance of finishing within budget is under 1%. A P80 contingency of <strong>$215M</strong> is needed.</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The punch list is likely to clear by <strong>25 Oct 2026 (P50)</strong>, 06 Dec 2026 at P80, about 4 months earlier than the straight-line forecast, because new items are already tapering. If new items do not taper, the P50 slips to 28 Mar 2027.</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Only 44.3% of high-priority RFIs are answered within the 5-day target, the worst of the three priorities.</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A supplier's own delivery history is the strongest predictor of a late PO, but the signal is modest (AUC 0.60). The riskiest 20% of POs are late 1.5x as often as average.</td>
+<td>6</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Clustering finds a <strong>"Delivery risk"</strong> group of 44 suppliers with 59% on-time delivery that the rule-based RFMT segments spread across 5 groups, including 7 Strategic suppliers.</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h2>Analysis Roadmap</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Question</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Data profiling</td>
+<td>Can the data be trusted?</td>
+<td>Completeness, uniqueness, and logic checks</td>
+</tr>
+<tr>
+<td>2. Diagnostic statistics</td>
+<td>Are the differences we see real or noise?</td>
+<td>Chi-square with Cramer's V, Kruskal-Wallis, Mann-Whitney, Spearman</td>
+</tr>
+<tr>
+<td>3. Advanced earned value</td>
+<td>When will the project finish, and what will it cost?</td>
+<td>Earned schedule (SPI(t)), three EAC methods</td>
+</tr>
+<tr>
+<td>4. Simulation</td>
+<td>How uncertain are those forecasts?</td>
+<td>Monte Carlo: bootstrapped CPI by control account; punch list burndown with uncertain taper</td>
+</tr>
+<tr>
+<td>5. Survival analysis</td>
+<td>How long do RFIs really take, counting ones still open?</td>
+<td>Kaplan-Meier with right-censoring</td>
+</tr>
+<tr>
+<td>6. Predictive modeling</td>
+<td>Which new POs will be delivered late?</td>
+<td>Logistic regression vs gradient boosting, leakage-safe features, time-based split, permutation importance</td>
+</tr>
+<tr>
+<td>7. Unsupervised learning</td>
+<td>Are there supplier groups or POs the rules miss?</td>
+<td>K-means with silhouette selection, PCA, isolation forest</td>
+</tr>
+<tr>
+<td>8. Prescriptive</td>
+<td>Where should management act first?</td>
+<td>What-if scenarios quantified from Levels 2 to 7</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Level 1. Data Profiling and Quality</h2>
+<p><strong>Question:</strong> Is the data complete, unique, and logically consistent enough to analyze?</p>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Rows</th>
+<th>Columns</th>
+<th>Null cells %</th>
+<th>Duplicate keys</th>
+<th>First date</th>
+<th>Last date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>engineering_documents</td>
+<td>2400</td>
+<td>10</td>
+<td>0.8</td>
+<td>0</td>
+<td>2024-01-08</td>
+<td>2026-07-22</td>
+</tr>
+<tr>
+<td>rfis</td>
+<td>1849</td>
+<td>9</td>
+<td>0.2</td>
+<td>0</td>
+<td>2024-06-07</td>
+<td>2026-06-29</td>
+</tr>
+<tr>
+<td>purchase_orders</td>
+<td>1600</td>
+<td>7</td>
+<td>1.9</td>
+<td>0</td>
+<td>2024-02-11</td>
+<td>2026-06-29</td>
+</tr>
+<tr>
+<td>punch_items</td>
+<td>6200</td>
+<td>7</td>
+<td>1.5</td>
+<td>0</td>
+<td>2025-07-01</td>
+<td>2026-06-29</td>
+</tr>
+<tr>
+<td>ncrs</td>
+<td>380</td>
+<td>6</td>
+<td>0.6</td>
+<td>0</td>
+<td>2024-09-01</td>
+<td>2026-06-26</td>
+</tr>
+<tr>
+<td>ev_monthly</td>
+<td>1344</td>
+<td>5</td>
+<td>11.4</td>
+<td>0</td>
+<td>2024-01-31</td>
+<td>2027-06-30</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Logic rule</th>
+<th>Violations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Approved before first submittal</td>
+<td>0</td>
+</tr>
+<tr>
+<td>RFI answered before raised</td>
+<td>0</td>
+</tr>
+<tr>
+<td>PO promised before PO date</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Non-positive PO value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Punch closed before raised</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Events after data date</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Earned value above budget</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> No duplicate keys and no logic violations. Null cells are expected: unanswered RFIs, undelivered POs, open punch items, and future months with no earned value yet. These nulls carry meaning and are handled explicitly in later levels (for example, as censored records in Level 5).</p>
+<h2>Level 2. Diagnostic Statistics</h2>
+<p><strong>Question:</strong> Are the discipline differences on the dashboards statistically real?</p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Hypothesis</th>
+<th>Statistic</th>
+<th>p-value</th>
+<th>Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chi-square</td>
+<td>First-review return code is independent of discipline</td>
+<td>chi2 = 86.1, df = 14, Cramer's V = 0.135</td>
+<td>&lt; 0.001</td>
+<td>Real but modest association</td>
+</tr>
+<tr>
+<td>Kruskal-Wallis</td>
+<td>RFI response time is the same across disciplines</td>
+<td>H = 70.2</td>
+<td>&lt; 0.001</td>
+<td>Response times differ by discipline</td>
+</tr>
+<tr>
+<td>Mann-Whitney (one-sided)</td>
+<td>High-priority RFIs are answered faster than Low</td>
+<td>Medians 6 vs 13 days</td>
+<td>&lt; 0.001</td>
+<td>Priority is respected</td>
+</tr>
+<tr>
+<td>Spearman</td>
+<td>Disciplines with lower first-time approval raise more RFIs per document</td>
+<td>rho = -0.36</td>
+<td>0.385</td>
+<td>Not significant (n = 8 disciplines)</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Chi-square residuals" src="analysis/L2_chi_square_residuals.png" /></p>
+<p><strong>Result:</strong> Piping (+4.3) and I&amp;C (+2.9) receive far more "revise and resubmit" (Code 3) returns than expected. With only 8 disciplines, the link between design quality and field RFIs cannot be confirmed; it should be retested at the drawing level, where the sample is much larger.</p>
+<h2>Level 3. Advanced Earned Value: Earned Schedule</h2>
+<p><strong>Question:</strong> Cost-based SPI drifts toward 1.00 late in every project and stops measuring schedule. When will this project actually finish?</p>
+<p>Earned schedule (ES) finds the date on which today's earned value was planned to be reached.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actual time (AT)</td>
+<td>30 months</td>
+</tr>
+<tr>
+<td>Earned schedule (ES)</td>
+<td>28.72 months</td>
+</tr>
+<tr>
+<td>SPI(t) = ES / AT</td>
+<td>0.957 (cost-based SPI: 0.932)</td>
+</tr>
+<tr>
+<td>Forecast duration = planned / SPI(t)</td>
+<td>43.9 months vs 42 planned</td>
+</tr>
+<tr>
+<td>Forecast completion</td>
+<td><strong>Aug 2027</strong> (planned Jun 2027, slip 1.9 months)</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Earned schedule" src="analysis/L3_earned_schedule.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>EAC</th>
+<th>Variance at completion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPI method (BAC / CPI)</td>
+<td>$5.01B</td>
+<td>-$192M</td>
+</tr>
+<tr>
+<td>Composite (AC + (BAC - EV) / (CPI x SPI))</td>
+<td>$5.12B</td>
+<td>-$308M</td>
+</tr>
+<tr>
+<td>Remaining at plan rate (AC + BAC - EV)</td>
+<td>$4.95B</td>
+<td>-$132M</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> The three EAC methods span $4.95B to $5.12B. The composite method is the most conservative because it assumes the schedule delay also costs money. Level 4 replaces this single-point range with a probability distribution.</p>
+<h2>Level 4. Monte Carlo Simulation</h2>
+<h3>4.1 Cost at completion</h3>
+<p><strong>Method:</strong> For each of the 32 control accounts, future cost performance is resampled from that account's own last 12 monthly CPIs, plus a shared project-wide shock so accounts move together. 10,000 runs.</p>
+<table>
+<thead>
+<tr>
+<th>Percentile</th>
+<th>Estimate at completion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P10</td>
+<td>$4.95B</td>
+</tr>
+<tr>
+<td>P50</td>
+<td>$5.00B</td>
+</tr>
+<tr>
+<td>P80</td>
+<td>$5.03B</td>
+</tr>
+<tr>
+<td>P90</td>
+<td>$5.05B</td>
+</tr>
+<tr>
+<td>Budget (BAC)</td>
+<td>$4.82B</td>
+</tr>
+<tr>
+<td>Probability of finishing within budget</td>
+<td>0.0%</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="EAC Monte Carlo" src="analysis/L4_eac_monte_carlo.png" /></p>
+<h3>4.2 Punch list completion</h3>
+<p><strong>Method:</strong> Each simulated week draws raised and closed counts from the last 12 weeks (average 140.4 raised and 157.7 closed per week). New items taper as construction finishes, and the taper rate itself is uncertain (0% to 4% per week, drawn per run). 5,000 runs.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>P50</th>
+<th>P80</th>
+<th>P90</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base (uncertain taper)</td>
+<td>25 Oct 2026</td>
+<td>06 Dec 2026</td>
+<td>10 Jan 2027</td>
+</tr>
+<tr>
+<td>No taper (new items continue at current rate)</td>
+<td>28 Mar 2027</td>
+<td>30 May 2027</td>
+<td></td>
+</tr>
+<tr>
+<td>Closure rate +20%</td>
+<td>13 Sep 2026</td>
+<td>27 Sep 2026</td>
+<td></td>
+</tr>
+<tr>
+<td>Straight-line trend (dashboard forecast)</td>
+<td>14 Mar 2027</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Punch simulation" src="analysis/L4_punch_simulation.png" /></p>
+<p><strong>Result:</strong> The straight-line forecast on the dashboard is close to the no-taper scenario, so it is a pessimistic view. The simulation gives a range instead of one date and shows which assumption matters most: whether new punch items keep tapering.</p>
+<h2>Level 5. Survival Analysis: RFI Time to Answer</h2>
+<p><strong>Question:</strong> How long do RFIs take, when 37 RFIs are still open?</p>
+<p>Averaging only answered RFIs ignores the open ones, which are often the slowest. Kaplan-Meier treats open RFIs as censored: they count as "not yet answered" for as long as they have been open.</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>RFIs</th>
+<th>Still open (censored)</th>
+<th>Target</th>
+<th>Answered by target</th>
+<th>Median</th>
+<th>90% answered by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High</td>
+<td>377</td>
+<td>1</td>
+<td>5 days</td>
+<td>44.3%</td>
+<td>6 days</td>
+<td>11 days</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>1013</td>
+<td>17</td>
+<td>10 days</td>
+<td>56.0%</td>
+<td>9 days</td>
+<td>22 days</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>459</td>
+<td>19</td>
+<td>14 days</td>
+<td>55.0%</td>
+<td>13 days</td>
+<td>33 days</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="RFI survival" src="analysis/L5_rfi_survival.png" /></p>
+<p><strong>Result:</strong> High-priority RFIs are answered fastest in absolute days, but only 44.3% meet their 5-day target, the lowest attainment of any priority. The 5-day target and actual practice are misaligned: either the target needs resourcing or it needs resetting.</p>
+<h2>Level 6. Predictive Model: Late Purchase Order Delivery</h2>
+<p><strong>Question:</strong> When a PO is placed, can we predict whether it will be delivered late?</p>
+<table>
+<thead>
+<tr>
+<th>Design choice</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label</td>
+<td>Delivered after promised date (POs with a delivery date only)</td>
+</tr>
+<tr>
+<td>Features</td>
+<td>PO value (log), promised lead time, category, month, supplier's prior PO count, supplier's prior late rate</td>
+</tr>
+<tr>
+<td>Leakage control</td>
+<td>Supplier history uses only POs already <strong>delivered before</strong> the new PO was placed</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Time-based split: train on POs before 01 Oct 2025 (948), test on later POs (443)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Holdout AUC</th>
+<th>Valid?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logistic regression</td>
+<td>0.596</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Gradient boosting</td>
+<td>0.549</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Gradient boosting with LEAKY feature</td>
+<td>0.736</td>
+<td>No: uses future information</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ROC curves" src="analysis/L6_roc.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>AUC drop when shuffled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>supplier prior late rate</td>
+<td>0.045</td>
+</tr>
+<tr>
+<td>category (all dummies)</td>
+<td>0.037</td>
+</tr>
+<tr>
+<td>supplier prior pos</td>
+<td>0.010</td>
+</tr>
+<tr>
+<td>log value</td>
+<td>0.009</td>
+</tr>
+<tr>
+<td>lead days</td>
+<td>0.004</td>
+</tr>
+<tr>
+<td>month index</td>
+<td>-0.001</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Feature importance" src="analysis/L6_feature_importance.png" /></p>
+<p><strong>Result:</strong> The best valid model is logistic regression (AUC 0.596). The simpler model wins because the dataset is small. Flagging the top 20% riskiest POs catches 30% of late deliveries at a 22.7% late rate vs 15.1% overall (1.5x lift). That is enough to target expediting, not enough to automate decisions.</p>
+<p><strong>Leakage lesson:</strong> Using each supplier's late rate over all POs, including future ones, raises AUC to 0.74. That model looks better but would fail in production, because the future is not known when a PO is placed.</p>
+<h2>Level 7. Unsupervised Learning</h2>
+<h3>7.1 Supplier clustering</h3>
+<p><strong>Method:</strong> K-means on standardized recency, frequency, log spend, tenure, and on-time delivery. k was chosen from 3 or 4 by silhouette score (k = 4, silhouette 0.27). Scores for k = 2 to 6 ranged from 0.23 to 0.27, so the clusters overlap and should be read as tendencies.</p>
+<table>
+<thead>
+<tr>
+<th>Cluster</th>
+<th>Suppliers</th>
+<th>Median spend ($M)</th>
+<th>Median POs</th>
+<th>Days since last PO</th>
+<th>Mean OTD %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inactive</td>
+<td>13</td>
+<td>1.1</td>
+<td>3.0</td>
+<td>421.0</td>
+<td>92.6</td>
+</tr>
+<tr>
+<td>Delivery risk</td>
+<td>44</td>
+<td>5.3</td>
+<td>5.0</td>
+<td>80.5</td>
+<td>59.1</td>
+</tr>
+<tr>
+<td>Core high-volume</td>
+<td>38</td>
+<td>23.1</td>
+<td>17.0</td>
+<td>27.0</td>
+<td>88.0</td>
+</tr>
+<tr>
+<td>Steady mid-tier</td>
+<td>45</td>
+<td>2.6</td>
+<td>4.0</td>
+<td>65.0</td>
+<td>94.6</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Supplier clusters" src="analysis/L7_supplier_clusters.png" /></p>
+<p><strong>Cluster vs RFMT segment (supplier counts):</strong></p>
+<table>
+<thead>
+<tr>
+<th>cluster_name</th>
+<th>Core tactical</th>
+<th>Dormant</th>
+<th>High value, going quiet</th>
+<th>New and active</th>
+<th>Strategic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core high-volume</td>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>29</td>
+</tr>
+<tr>
+<td>Delivery risk</td>
+<td>19</td>
+<td>10</td>
+<td>5</td>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Inactive</td>
+<td>2</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Steady mid-tier</td>
+<td>15</td>
+<td>12</td>
+<td>2</td>
+<td>13</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> RFMT rules segment on buying behavior only. Adding delivery performance surfaces a "Delivery risk" cluster that spans 5 of the 5 RFMT segments, including 7 Strategic suppliers. A supplier can be Strategic by spend and still be a delivery risk.</p>
+<h3>7.2 Purchase order anomaly detection</h3>
+<p><strong>Method:</strong> Isolation forest on PO value, lead time, and both measured relative to the category median. Top 1% flagged (16 POs).</p>
+<table>
+<thead>
+<tr>
+<th>PO</th>
+<th>Category</th>
+<th>Value</th>
+<th>Lead days</th>
+<th>Value vs category median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PO-00994</td>
+<td>Exhaust &amp; Abatement</td>
+<td>$64,921,200</td>
+<td>277</td>
+<td>106.9x</td>
+</tr>
+<tr>
+<td>PO-00646</td>
+<td>HVAC &amp; Air Handling</td>
+<td>$12,161,900</td>
+<td>295</td>
+<td>14.5x</td>
+</tr>
+<tr>
+<td>PO-00723</td>
+<td>HVAC &amp; Air Handling</td>
+<td>$36,100</td>
+<td>294</td>
+<td>0.0x</td>
+</tr>
+<tr>
+<td>PO-01252</td>
+<td>HVAC &amp; Air Handling</td>
+<td>$95,700</td>
+<td>325</td>
+<td>0.1x</td>
+</tr>
+<tr>
+<td>PO-00525</td>
+<td>Concrete &amp; Rebar</td>
+<td>$17,188,000</td>
+<td>111</td>
+<td>41.2x</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="PO anomalies" src="analysis/L7_po_anomalies.png" /></p>
+<p><strong>Result:</strong> Flagged POs combine unusual value with unusual lead time for their category. These are candidates for a commercial review (price check, scope check, or data entry error), not proof of a problem.</p>
+<h2>Level 8. Prescriptive: Where to Act First</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Evidence</th>
+<th>Quantified effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Add a design-review checkpoint for Piping and I&amp;C before client submittal</td>
+<td>Level 2: Code 3 rate 28.7% vs 16.2% elsewhere</td>
+<td>About 89 fewer Code 3 returns and 182 fewer resubmittal cycles at the other disciplines' rate</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hold P80 cost contingency of $215M</td>
+<td>Level 4: P80 EAC $5.03B</td>
+<td>Funds the overrun in 80% of simulated outcomes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Target FAB productivity first</td>
+<td>Level 3: FAB CPI 0.96, $0.8B of work remaining</td>
+<td>Each +0.02 CPI on remaining FAB work saves about $17M</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Add punch closure capacity (+20%)</td>
+<td>Level 4: closure-rate scenario</td>
+<td>P80 completion moves from 06 Dec 2026 to 27 Sep 2026 (10 weeks earlier)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Re-baseline or resource the 5-day high-priority RFI target</td>
+<td>Level 5: 44.3% attainment</td>
+<td>Align target with practice so it drives real escalation</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Expedite the top 20% of POs by predicted late risk, prioritizing the "Delivery risk" cluster</td>
+<td>Levels 6 and 7</td>
+<td>Covers 30% of late deliveries with 20% of expediting effort</td>
+</tr>
+</tbody>
+</table>
+<h2>Method Notes</h2>
+<ul>
+<li>All figures and tables are generated by <code>src/advanced_analysis.py</code>; this report is generated from its output by <code>src/write_report.py</code>, so numbers cannot drift from the code.</li>
+<li>Random seeds are fixed, so the simulations and models reproduce exactly.</li>
+<li>Because the data is synthetic, some patterns (for example Piping and I&amp;C performance) were built into the generator. The value of this report is the method: each technique would be applied the same way to real project data.</li>
+</ul></main></body></html>

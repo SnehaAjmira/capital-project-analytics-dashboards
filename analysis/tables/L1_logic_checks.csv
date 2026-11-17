@@ -1,0 +1,8 @@
+rule,violations
+Approved before first submittal,0
+RFI answered before raised,0
+PO promised before PO date,0
+Non-positive PO value,0
+Punch closed before raised,0
+Events after data date,0
+Earned value above budget,0

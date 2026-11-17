@@ -1,0 +1,4 @@
+method,eac_busd,vac_musd
+CPI method (BAC / CPI),5.009,-192
+Composite (AC + (BAC - EV) / (CPI x SPI)),5.125,-307
+Remaining at plan rate (AC + BAC - EV),4.949,-132
