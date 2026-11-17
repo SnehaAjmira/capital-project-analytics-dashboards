@@ -1,0 +1,381 @@
+ncr_no,discipline,cause,raised_date,closed_date,rework_cost
+NCR-0001,Structural,Wrong revision used,2025-09-09,2025-09-25,18200.0
+NCR-0002,Mechanical,Workmanship,2026-01-23,2026-02-16,9800.0
+NCR-0003,Piping,Inspection hold missed,2025-01-24,2025-01-26,6800.0
+NCR-0004,Mechanical,Workmanship,2026-06-03,2026-06-25,7000.0
+NCR-0005,Structural,Supplier material defect,2026-01-19,2026-02-15,12100.0
+NCR-0006,Mechanical,Supplier material defect,2025-06-26,2025-07-21,3600.0
+NCR-0007,Civil,Workmanship,2025-12-15,2026-01-24,6700.0
+NCR-0008,Structural,Workmanship,2025-10-18,2025-11-24,43900.0
+NCR-0009,I&C,Supplier material defect,2025-04-23,2025-05-12,5000.0
+NCR-0010,Structural,Supplier material defect,2025-05-07,2025-05-30,13500.0
+NCR-0011,Piping,Weld defect,2025-02-12,2025-03-22,19400.0
+NCR-0012,I&C,Inspection hold missed,2025-03-10,2025-04-06,41200.0
+NCR-0013,Piping,Workmanship,2025-10-23,2025-10-28,4000.0
+NCR-0014,Civil,Supplier material defect,2025-06-26,2025-07-22,6300.0
+NCR-0015,Electrical,Weld defect,2026-05-09,2026-06-02,13800.0
+NCR-0016,Mechanical,Wrong revision used,2024-11-04,2024-11-15,39100.0
+NCR-0017,Piping,Inspection hold missed,2025-07-10,2025-08-14,28000.0
+NCR-0018,Architectural,Workmanship,2025-03-21,2025-04-20,74000.0
+NCR-0019,Architectural,Supplier material defect,2025-07-12,2025-08-10,7800.0
+NCR-0020,Civil,Workmanship,2025-11-04,2025-11-22,7000.0
+NCR-0021,Mechanical,Wrong revision used,2025-05-28,2025-07-29,7500.0
+NCR-0022,Fire Protection,Wrong revision used,2025-07-07,2025-07-26,7400.0
+NCR-0023,Mechanical,Wrong revision used,2025-12-13,2026-02-11,6000.0
+NCR-0024,Electrical,Wrong revision used,2025-06-27,2025-07-23,22400.0
+NCR-0025,Electrical,Inspection hold missed,2025-02-10,2025-02-28,2600.0
+NCR-0026,Structural,Supplier material defect,2026-06-26,,49600.0
+NCR-0027,Electrical,Weld defect,2026-06-08,2026-06-29,12600.0
+NCR-0028,I&C,Damage in handling,2026-02-10,2026-02-13,22000.0
+NCR-0029,Fire Protection,Supplier material defect,2025-03-21,2025-04-10,3800.0
+NCR-0030,Structural,Wrong revision used,2024-11-24,2025-02-20,6600.0
+NCR-0031,Structural,Weld defect,2026-02-04,2026-03-02,8000.0
+NCR-0032,Structural,Wrong revision used,2026-03-12,2026-04-06,8800.0
+NCR-0033,Electrical,Workmanship,2025-08-28,2025-09-17,8600.0
+NCR-0034,Piping,Supplier material defect,2024-09-22,2024-10-06,14600.0
+NCR-0035,Piping,Workmanship,2024-09-27,2024-10-06,8400.0
+NCR-0036,Structural,Supplier material defect,2024-10-10,2024-11-13,28600.0
+NCR-0037,Piping,Torque or bolting,2026-03-09,2026-03-16,32700.0
+NCR-0038,Structural,Workmanship,2025-07-24,2025-08-08,85700.0
+NCR-0039,Mechanical,Workmanship,2026-04-03,2026-04-12,18600.0
+NCR-0040,Piping,Workmanship,2025-12-22,2025-12-30,12100.0
+NCR-0041,I&C,Workmanship,2025-10-23,2025-11-06,16400.0
+NCR-0042,I&C,Workmanship,2024-10-24,2024-11-29,22600.0
+NCR-0043,Piping,Torque or bolting,2025-12-18,2025-12-31,7300.0
+NCR-0044,Structural,Workmanship,2024-10-02,2024-11-12,34500.0
+NCR-0045,Civil,Torque or bolting,2025-01-10,2025-01-12,30400.0
+NCR-0046,Mechanical,Supplier material defect,2024-10-01,2024-10-26,2800.0
+NCR-0047,Piping,Workmanship,2026-01-17,2026-01-23,98300.0
+NCR-0048,Piping,Workmanship,2025-12-03,2026-01-03,19900.0
+NCR-0049,Piping,Wrong revision used,2026-05-06,2026-06-23,6000.0
+NCR-0050,Electrical,Inspection hold missed,2026-03-19,2026-04-26,5700.0
+NCR-0051,Piping,Supplier material defect,2024-11-11,2024-11-20,18700.0
+NCR-0052,I&C,Damage in handling,2026-01-02,2026-02-15,6600.0
+NCR-0053,Civil,Workmanship,2026-05-23,2026-05-31,6000.0
+NCR-0054,Fire Protection,Weld defect,2024-09-01,2024-09-10,9900.0
+NCR-0055,Mechanical,Weld defect,2024-11-27,2024-12-29,24500.0
+NCR-0056,Piping,Workmanship,2025-12-16,2025-12-21,10600.0
+NCR-0057,Mechanical,Supplier material defect,2026-04-03,2026-04-18,6400.0
+NCR-0058,Electrical,Workmanship,2025-09-03,2025-09-20,70000.0
+NCR-0059,Structural,Wrong revision used,2025-11-19,2026-01-05,24300.0
+NCR-0060,Piping,Supplier material defect,2025-03-30,2025-05-12,6300.0
+NCR-0061,Piping,Weld defect,2025-01-17,2025-02-26,18400.0
+NCR-0062,Structural,Torque or bolting,2024-10-11,2024-11-06,17100.0
+NCR-0063,Electrical,Supplier material defect,2025-07-18,2025-09-07,14800.0
+NCR-0064,Mechanical,Inspection hold missed,2025-04-20,2025-04-26,15500.0
+NCR-0065,Fire Protection,Inspection hold missed,2025-03-07,2025-04-18,12600.0
+NCR-0066,Structural,Damage in handling,2026-03-01,2026-03-16,23500.0
+NCR-0067,Piping,Workmanship,2025-03-17,2025-03-24,14500.0
+NCR-0068,Civil,Workmanship,2025-04-09,2025-05-14,18200.0
+NCR-0069,Piping,Supplier material defect,2025-11-30,2025-12-12,23200.0
+NCR-0070,Civil,Damage in handling,2024-09-21,2024-10-09,14200.0
+NCR-0071,I&C,Workmanship,2025-05-04,2025-05-23,31100.0
+NCR-0072,Structural,Wrong revision used,2025-05-07,2025-06-10,56400.0
+NCR-0073,Piping,Supplier material defect,2025-08-28,2025-09-30,11500.0
+NCR-0074,Structural,Workmanship,2025-11-12,2025-12-19,8800.0
+NCR-0075,Piping,Supplier material defect,2025-04-29,2025-05-04,3900.0
+NCR-0076,Civil,Damage in handling,2026-06-18,,30100.0
+NCR-0077,Electrical,Workmanship,2025-09-22,2025-10-27,12900.0
+NCR-0078,Piping,Wrong revision used,2024-12-24,2025-02-06,4800.0
+NCR-0079,Piping,Wrong revision used,2024-10-19,2024-11-10,8800.0
+NCR-0080,Piping,Torque or bolting,2025-07-25,2025-08-04,23400.0
+NCR-0081,Mechanical,Workmanship,2025-10-26,2025-12-03,32900.0
+NCR-0082,Electrical,Wrong revision used,2024-09-27,2024-10-26,26000.0
+NCR-0083,Mechanical,Wrong revision used,2025-10-25,2025-11-04,14300.0
+NCR-0084,I&C,Weld defect,2025-01-27,2025-02-01,31000.0
+NCR-0085,Electrical,Inspection hold missed,2025-06-06,2025-07-04,16700.0
+NCR-0086,Mechanical,Wrong revision used,2026-01-09,2026-02-05,18500.0
+NCR-0087,Piping,Inspection hold missed,2025-06-17,2025-06-28,6800.0
+NCR-0088,Structural,Torque or bolting,2024-10-24,2024-11-08,44200.0
+NCR-0089,Piping,Workmanship,2025-03-20,2025-04-02,29700.0
+NCR-0090,Piping,Workmanship,2024-12-30,2025-01-25,10400.0
+NCR-0091,Piping,Workmanship,2024-09-02,2024-10-09,45400.0
+NCR-0092,Structural,Wrong revision used,2025-03-08,2025-04-05,4300.0
+NCR-0093,Mechanical,Supplier material defect,2026-05-14,2026-06-04,6800.0
+NCR-0094,Architectural,Supplier material defect,2025-02-02,2025-03-10,4500.0
+NCR-0095,Architectural,Inspection hold missed,2025-03-22,2025-04-21,10100.0
+NCR-0096,Mechanical,Inspection hold missed,2026-05-11,2026-06-18,7300.0
+NCR-0097,Civil,Wrong revision used,2025-10-31,2025-11-12,38800.0
+NCR-0098,Structural,Damage in handling,2026-01-05,2026-01-29,17100.0
+NCR-0099,Mechanical,Inspection hold missed,2026-03-18,2026-04-10,11400.0
+NCR-0100,Piping,Inspection hold missed,2025-08-11,2025-08-14,23000.0
+NCR-0101,Piping,Supplier material defect,2025-05-12,2025-06-06,33000.0
+NCR-0102,Piping,Damage in handling,2025-02-11,2025-02-15,55200.0
+NCR-0103,Electrical,Workmanship,2024-11-01,2025-01-10,13900.0
+NCR-0104,Electrical,Weld defect,2026-04-21,2026-05-09,15000.0
+NCR-0105,Civil,Wrong revision used,2024-12-16,2025-01-23,5400.0
+NCR-0106,Civil,Supplier material defect,2026-05-13,,18200.0
+NCR-0107,Mechanical,Workmanship,2025-06-27,2025-07-31,19500.0
+NCR-0108,Piping,Supplier material defect,2025-09-24,2025-10-05,8600.0
+NCR-0109,Structural,Supplier material defect,2025-03-26,2025-04-25,15800.0
+NCR-0110,Structural,Weld defect,2024-09-04,2024-09-12,11900.0
+NCR-0111,I&C,Inspection hold missed,2025-10-05,2025-10-24,21700.0
+NCR-0112,I&C,Workmanship,2026-05-27,,12100.0
+NCR-0113,Electrical,Weld defect,2024-12-21,2025-01-20,18500.0
+NCR-0114,Mechanical,Torque or bolting,2025-09-22,2025-10-24,8800.0
+NCR-0115,Piping,Workmanship,2025-07-06,2025-07-29,32400.0
+NCR-0116,Mechanical,Weld defect,2026-02-14,2026-02-24,24400.0
+NCR-0117,Structural,Supplier material defect,2026-02-13,2026-03-05,44000.0
+NCR-0118,Piping,Supplier material defect,2025-09-11,2025-09-30,16700.0
+NCR-0119,Electrical,Inspection hold missed,2025-12-15,2025-12-18,14100.0
+NCR-0120,Mechanical,Weld defect,2025-03-10,2025-04-19,3600.0
+NCR-0121,Mechanical,Supplier material defect,2024-09-20,2024-11-06,35300.0
+NCR-0122,Mechanical,Supplier material defect,2025-12-18,2026-01-11,16100.0
+NCR-0123,Piping,Supplier material defect,2024-09-03,2024-10-08,11700.0
+NCR-0124,Piping,Workmanship,2026-05-19,2026-05-20,33600.0
+NCR-0125,Architectural,Inspection hold missed,2024-10-30,2024-11-17,31800.0
+NCR-0126,Piping,Damage in handling,2025-06-22,2025-07-02,10100.0
+NCR-0127,Structural,Workmanship,2026-01-14,2026-02-06,20800.0
+NCR-0128,Structural,Supplier material defect,2025-09-03,2025-09-19,15500.0
+NCR-0129,Mechanical,Supplier material defect,2025-09-15,2025-09-21,46300.0
+NCR-0130,Electrical,Weld defect,2025-06-04,2025-07-09,5400.0
+NCR-0131,Structural,Inspection hold missed,2025-05-03,2025-05-06,55700.0
+NCR-0132,Structural,Wrong revision used,2024-10-11,2024-10-16,42400.0
+NCR-0133,I&C,Weld defect,2025-06-12,2025-08-21,10000.0
+NCR-0134,Structural,Workmanship,2025-01-19,2025-01-28,8800.0
+NCR-0135,Fire Protection,Workmanship,2025-06-21,2025-08-07,22000.0
+NCR-0136,I&C,Workmanship,2025-09-22,2025-09-29,3900.0
+NCR-0137,Fire Protection,Inspection hold missed,2026-01-23,2026-02-20,18700.0
+NCR-0138,Piping,Supplier material defect,2026-04-06,2026-04-07,17700.0
+NCR-0139,Structural,Wrong revision used,2026-02-19,2026-03-19,24800.0
+NCR-0140,Piping,Workmanship,2024-09-02,2024-09-09,7700.0
+NCR-0141,Structural,Workmanship,2025-12-21,2026-02-03,167200.0
+NCR-0142,Mechanical,Workmanship,2025-08-02,2025-08-18,17800.0
+NCR-0143,Structural,Damage in handling,2024-11-23,2024-12-27,48300.0
+NCR-0144,Architectural,Wrong revision used,2025-10-21,2025-11-11,22700.0
+NCR-0145,Fire Protection,Wrong revision used,2025-02-14,2025-03-04,35000.0
+NCR-0146,Piping,Wrong revision used,2024-11-19,2024-11-20,4700.0
+NCR-0147,Mechanical,Workmanship,2026-03-19,2026-05-08,86600.0
+NCR-0148,Electrical,Workmanship,2024-09-21,2024-10-05,25100.0
+NCR-0149,Electrical,Torque or bolting,2025-12-15,2026-01-28,23500.0
+NCR-0150,Structural,Wrong revision used,2026-05-22,2026-06-29,26900.0
+NCR-0151,Piping,Torque or bolting,2026-02-20,2026-02-24,23700.0
+NCR-0152,Mechanical,Inspection hold missed,2025-07-11,2025-07-24,17900.0
+NCR-0153,Piping,Damage in handling,2026-03-01,2026-03-27,11900.0
+NCR-0154,Architectural,Supplier material defect,2025-10-20,2025-10-26,5100.0
+NCR-0155,Mechanical,Workmanship,2025-04-23,2025-06-05,81300.0
+NCR-0156,I&C,Supplier material defect,2025-09-10,2025-09-28,5500.0
+NCR-0157,Piping,Supplier material defect,2025-08-18,2025-09-07,41100.0
+NCR-0158,Piping,Supplier material defect,2025-09-12,2025-10-04,23800.0
+NCR-0159,Structural,Supplier material defect,2025-07-23,2025-08-27,7800.0
+NCR-0160,Civil,Wrong revision used,2025-06-21,2025-06-25,30600.0
+NCR-0161,Fire Protection,Workmanship,2026-02-21,2026-03-01,10000.0
+NCR-0162,Piping,Wrong revision used,2026-06-23,,96700.0
+NCR-0163,Civil,Supplier material defect,2026-04-04,2026-04-09,14100.0
+NCR-0164,Architectural,Supplier material defect,2026-06-20,,35100.0
+NCR-0165,Piping,Inspection hold missed,2025-04-30,2025-05-14,9300.0
+NCR-0166,Electrical,Weld defect,2025-12-21,2026-01-03,6100.0
+NCR-0167,Structural,Weld defect,2025-02-13,2025-03-05,14200.0
+NCR-0168,Architectural,Weld defect,2024-12-15,2025-01-07,69300.0
+NCR-0169,I&C,Inspection hold missed,2026-01-02,2026-01-24,3300.0
+NCR-0170,Mechanical,Wrong revision used,2025-02-09,2025-02-18,8300.0
+NCR-0171,Electrical,Workmanship,2024-09-03,2024-09-16,14200.0
+NCR-0172,Structural,Weld defect,2024-09-16,2024-09-24,6200.0
+NCR-0173,Civil,Workmanship,2026-06-18,,4900.0
+NCR-0174,Electrical,Supplier material defect,2025-07-13,2025-08-03,37000.0
+NCR-0175,Mechanical,Torque or bolting,2025-01-04,2025-01-22,7700.0
+NCR-0176,Piping,Workmanship,2026-05-21,,7100.0
+NCR-0177,Mechanical,Wrong revision used,2025-01-16,2025-01-23,8400.0
+NCR-0178,I&C,Workmanship,2026-06-08,2026-06-14,12400.0
+NCR-0179,Structural,Workmanship,2025-10-08,2025-10-29,23700.0
+NCR-0180,Civil,Workmanship,2025-01-15,2025-02-13,4900.0
+NCR-0181,Fire Protection,Inspection hold missed,2025-05-18,2025-06-24,12100.0
+NCR-0182,I&C,Workmanship,2025-09-10,2025-09-25,8200.0
+NCR-0183,Mechanical,Inspection hold missed,2024-09-21,2024-10-19,4400.0
+NCR-0184,Civil,Supplier material defect,2025-04-27,2025-05-19,9200.0
+NCR-0185,Mechanical,Workmanship,2025-03-16,2025-03-31,34000.0
+NCR-0186,Civil,Wrong revision used,2024-12-11,2025-03-01,19800.0
+NCR-0187,Piping,Workmanship,2026-04-06,2026-05-02,28900.0
+NCR-0188,Electrical,Weld defect,2024-11-27,2025-01-09,1600.0
+NCR-0189,Mechanical,Inspection hold missed,2025-07-04,2025-07-07,7700.0
+NCR-0190,Piping,Workmanship,2025-03-30,2025-04-22,22900.0
+NCR-0191,Mechanical,Workmanship,2026-02-07,2026-02-17,10100.0
+NCR-0192,Piping,Damage in handling,2026-05-09,2026-05-20,15300.0
+NCR-0193,Mechanical,Weld defect,2025-01-17,2025-01-28,15500.0
+NCR-0194,Piping,Supplier material defect,2024-09-30,2024-10-15,3400.0
+NCR-0195,Piping,Inspection hold missed,2025-12-06,2025-12-31,9700.0
+NCR-0196,Civil,Inspection hold missed,2026-02-12,2026-03-04,6100.0
+NCR-0197,Piping,Workmanship,2025-03-19,2025-04-25,19500.0
+NCR-0198,Civil,Supplier material defect,2025-10-02,2025-10-31,10100.0
+NCR-0199,Fire Protection,Workmanship,2026-01-18,2026-03-08,4500.0
+NCR-0200,Architectural,Weld defect,2024-11-14,2024-12-02,13400.0
+NCR-0201,Piping,Workmanship,2025-09-09,2025-09-25,60100.0
+NCR-0202,Mechanical,Inspection hold missed,2024-11-28,2025-01-02,2900.0
+NCR-0203,Electrical,Supplier material defect,2026-04-30,2026-05-13,38400.0
+NCR-0204,Civil,Supplier material defect,2024-12-02,2025-01-16,7500.0
+NCR-0205,Electrical,Workmanship,2024-10-22,2024-11-21,14300.0
+NCR-0206,Mechanical,Workmanship,2026-01-10,2026-01-19,3000.0
+NCR-0207,Fire Protection,Inspection hold missed,2025-04-15,2025-05-11,18700.0
+NCR-0208,Piping,Torque or bolting,2026-06-14,2026-06-27,20000.0
+NCR-0209,Mechanical,Damage in handling,2026-04-08,2026-04-24,81600.0
+NCR-0210,Electrical,Supplier material defect,2025-04-23,2025-05-28,22600.0
+NCR-0211,Piping,Workmanship,2025-04-03,2025-06-03,2500.0
+NCR-0212,Mechanical,Supplier material defect,2025-12-05,2025-12-19,16500.0
+NCR-0213,Piping,Wrong revision used,2024-12-31,2025-02-05,18900.0
+NCR-0214,Civil,Damage in handling,2025-12-25,2026-01-30,3800.0
+NCR-0215,I&C,Workmanship,2026-01-26,2026-02-28,1800.0
+NCR-0216,Structural,Wrong revision used,2025-06-23,2025-07-19,2400.0
+NCR-0217,Electrical,Torque or bolting,2026-05-10,2026-05-25,18500.0
+NCR-0218,I&C,Workmanship,2025-12-29,2026-02-03,11300.0
+NCR-0219,Piping,Workmanship,2026-02-14,2026-02-20,37300.0
+NCR-0220,Piping,Supplier material defect,2025-11-08,2025-11-27,53300.0
+NCR-0221,Mechanical,Wrong revision used,2025-05-26,2025-07-20,30000.0
+NCR-0222,Piping,Workmanship,2025-11-03,2025-11-19,32000.0
+NCR-0223,Piping,Inspection hold missed,2024-10-17,2024-11-08,45400.0
+NCR-0224,Structural,Inspection hold missed,2025-04-14,2025-06-14,21400.0
+NCR-0225,Mechanical,Workmanship,2024-11-19,2024-12-29,22600.0
+NCR-0226,Architectural,Inspection hold missed,2024-09-24,2024-09-29,2100.0
+NCR-0227,Civil,Workmanship,2025-11-28,2025-12-22,8200.0
+NCR-0228,Piping,Damage in handling,2026-05-07,2026-05-21,5000.0
+NCR-0229,Structural,Wrong revision used,2025-08-27,2025-09-02,49500.0
+NCR-0230,Mechanical,Weld defect,2026-06-10,,5500.0
+NCR-0231,Civil,Workmanship,2026-04-08,2026-06-03,5300.0
+NCR-0232,Electrical,Workmanship,2025-09-20,2025-10-01,10300.0
+NCR-0233,Structural,Wrong revision used,2025-07-01,2025-07-08,63000.0
+NCR-0234,Piping,Workmanship,2025-10-22,2025-11-01,79400.0
+NCR-0235,Piping,Weld defect,2025-10-08,2025-10-23,12700.0
+NCR-0236,Fire Protection,Workmanship,2024-12-08,2025-01-04,21700.0
+NCR-0237,Mechanical,Supplier material defect,2026-05-25,,13700.0
+NCR-0238,Mechanical,Inspection hold missed,2025-12-02,2025-12-25,25600.0
+NCR-0239,Civil,Inspection hold missed,2025-05-13,2025-06-09,2100.0
+NCR-0240,Mechanical,Wrong revision used,2025-02-16,2025-03-21,46800.0
+NCR-0241,Piping,Wrong revision used,2025-12-21,2026-01-09,14400.0
+NCR-0242,Piping,Workmanship,2025-06-26,2025-07-05,8500.0
+NCR-0243,Mechanical,Damage in handling,2025-11-06,2025-11-15,8100.0
+NCR-0244,Electrical,Wrong revision used,2025-08-30,2025-09-06,21400.0
+NCR-0245,Civil,Workmanship,2025-05-23,2025-05-31,60700.0
+NCR-0246,I&C,Workmanship,2025-10-20,2025-10-28,56000.0
+NCR-0247,Fire Protection,Supplier material defect,2025-03-02,2025-05-24,7200.0
+NCR-0248,Piping,Inspection hold missed,2025-06-24,2025-07-07,29500.0
+NCR-0249,Structural,Workmanship,2025-02-24,2025-03-02,6600.0
+NCR-0250,Electrical,Workmanship,2026-02-04,2026-02-11,7400.0
+NCR-0251,Mechanical,Workmanship,2024-10-01,2024-10-23,13000.0
+NCR-0252,Piping,Workmanship,2025-01-01,2025-01-28,22700.0
+NCR-0253,Electrical,Torque or bolting,2025-11-01,2025-11-22,24400.0
+NCR-0254,Mechanical,Torque or bolting,2025-04-22,2025-05-01,18100.0
+NCR-0255,Structural,Supplier material defect,2025-08-26,2025-09-05,3500.0
+NCR-0256,I&C,Weld defect,2024-11-24,2025-01-26,26400.0
+NCR-0257,Civil,Workmanship,2026-05-12,,122200.0
+NCR-0258,Mechanical,Workmanship,2025-03-15,2025-04-03,26900.0
+NCR-0259,Mechanical,Workmanship,2026-04-15,2026-05-03,47600.0
+NCR-0260,Piping,Workmanship,2025-06-19,2025-08-15,28500.0
+NCR-0261,Mechanical,Workmanship,2026-01-08,2026-02-17,34800.0
+NCR-0262,Structural,Workmanship,2025-08-01,2025-08-20,3700.0
+NCR-0263,Architectural,Supplier material defect,2025-10-21,2025-11-05,6500.0
+NCR-0264,Piping,Damage in handling,2024-12-19,2024-12-31,48800.0
+NCR-0265,Civil,Workmanship,2024-12-19,2024-12-27,35100.0
+NCR-0266,Mechanical,Wrong revision used,2024-12-04,2024-12-13,11000.0
+NCR-0267,Civil,Weld defect,2025-06-03,2025-06-19,18200.0
+NCR-0268,Mechanical,Workmanship,2025-11-01,2025-11-11,38700.0
+NCR-0269,Mechanical,Weld defect,2026-03-20,2026-04-11,20400.0
+NCR-0270,Mechanical,Weld defect,2025-09-19,2025-10-03,40200.0
+NCR-0271,Electrical,Supplier material defect,2025-04-04,2025-04-15,10600.0
+NCR-0272,Piping,Torque or bolting,2026-02-20,2026-03-02,44600.0
+NCR-0273,I&C,Supplier material defect,2025-01-04,2025-02-09,20600.0
+NCR-0274,Civil,Wrong revision used,2026-01-08,2026-01-29,5800.0
+NCR-0275,Piping,Torque or bolting,2025-12-20,2025-12-31,104300.0
+NCR-0276,Mechanical,Workmanship,2025-12-13,2025-12-25,117000.0
+NCR-0277,I&C,Weld defect,2025-02-01,2025-02-05,8800.0
+NCR-0278,Mechanical,Workmanship,2025-07-29,2025-08-16,10200.0
+NCR-0279,Electrical,Workmanship,2024-11-06,2024-11-11,30400.0
+NCR-0280,Piping,Wrong revision used,2025-02-25,2025-03-10,13000.0
+NCR-0281,I&C,Workmanship,2025-04-20,2025-05-23,14500.0
+NCR-0282,Architectural,Wrong revision used,2024-11-19,2024-12-04,58900.0
+NCR-0283,Architectural,Workmanship,2026-03-21,2026-04-10,4400.0
+NCR-0284,Mechanical,Workmanship,2025-01-27,2025-02-13,8300.0
+NCR-0285,Mechanical,Wrong revision used,2024-11-29,2024-12-20,14900.0
+NCR-0286,Piping,Weld defect,2024-09-29,2024-10-20,17000.0
+NCR-0287,Mechanical,Workmanship,2026-04-02,2026-05-27,62400.0
+NCR-0288,Piping,Workmanship,2025-06-11,2025-07-12,39700.0
+NCR-0289,Architectural,Supplier material defect,2026-06-17,,7600.0
+NCR-0290,Piping,Supplier material defect,2026-04-23,2026-05-07,22200.0
+NCR-0291,Mechanical,Wrong revision used,2025-12-23,2026-01-02,8200.0
+NCR-0292,Electrical,Workmanship,2024-11-13,2024-12-18,61200.0
+NCR-0293,Architectural,Damage in handling,2025-09-14,2025-09-27,10200.0
+NCR-0294,Structural,Workmanship,2025-07-31,2025-08-11,5600.0
+NCR-0295,Piping,Weld defect,2026-05-10,2026-05-18,44400.0
+NCR-0296,Structural,Torque or bolting,2025-01-18,2025-01-24,2400.0
+NCR-0297,Mechanical,Workmanship,2025-06-02,2025-06-04,8600.0
+NCR-0298,Civil,Wrong revision used,2026-04-09,2026-05-05,1100.0
+NCR-0299,Electrical,Weld defect,2024-12-22,2025-01-18,25200.0
+NCR-0300,Piping,Damage in handling,2026-01-25,2026-02-08,5800.0
+NCR-0301,Structural,Wrong revision used,2025-01-21,2025-03-09,54300.0
+NCR-0302,Mechanical,Supplier material defect,2025-11-16,2025-11-23,45700.0
+NCR-0303,I&C,Wrong revision used,2026-05-02,2026-05-11,8500.0
+NCR-0304,Architectural,Wrong revision used,2025-05-16,2025-06-12,133100.0
+NCR-0305,Architectural,Damage in handling,2026-02-06,2026-03-06,5900.0
+NCR-0306,Mechanical,Workmanship,2024-11-28,2024-12-24,5000.0
+NCR-0307,Electrical,Damage in handling,2024-11-26,2024-12-27,8700.0
+NCR-0308,Mechanical,Supplier material defect,2025-03-23,2025-03-27,17100.0
+NCR-0309,Mechanical,Supplier material defect,2026-01-30,2026-03-05,30400.0
+NCR-0310,Mechanical,Weld defect,2025-06-06,2025-07-18,71500.0
+NCR-0311,Mechanical,Supplier material defect,2025-01-31,2025-02-16,17100.0
+NCR-0312,Mechanical,Wrong revision used,2026-02-07,2026-02-17,10600.0
+NCR-0313,Structural,Workmanship,2026-02-04,2026-03-08,14000.0
+NCR-0314,Mechanical,Supplier material defect,2026-01-04,2026-01-23,30700.0
+NCR-0315,Mechanical,Workmanship,2026-06-01,2026-06-23,5600.0
+NCR-0316,Piping,Inspection hold missed,2026-03-19,2026-05-08,7600.0
+NCR-0317,Electrical,Workmanship,2025-02-22,2025-03-01,96800.0
+NCR-0318,Fire Protection,Wrong revision used,2025-06-21,2025-06-28,6600.0
+NCR-0319,Structural,Inspection hold missed,2025-03-25,2025-05-07,4400.0
+NCR-0320,Fire Protection,Supplier material defect,2026-03-25,2026-04-16,79200.0
+NCR-0321,Structural,Wrong revision used,2026-06-12,2026-06-20,22300.0
+NCR-0322,I&C,Inspection hold missed,2026-04-10,2026-04-26,51400.0
+NCR-0323,Architectural,Workmanship,2025-07-20,2025-08-09,3100.0
+NCR-0324,Electrical,Workmanship,2025-06-02,2025-06-22,64900.0
+NCR-0325,Piping,Wrong revision used,2026-04-27,2026-05-29,400.0
+NCR-0326,Structural,Supplier material defect,2024-12-27,2025-01-12,14200.0
+NCR-0327,Civil,Wrong revision used,2025-10-07,2025-10-19,82600.0
+NCR-0328,Piping,Weld defect,2026-03-12,2026-03-23,56700.0
+NCR-0329,Mechanical,Wrong revision used,2025-07-23,2025-08-01,35300.0
+NCR-0330,Piping,Inspection hold missed,2026-03-28,2026-06-20,76000.0
+NCR-0331,Structural,Supplier material defect,2024-12-20,2025-01-18,13200.0
+NCR-0332,Electrical,Torque or bolting,2024-09-02,2024-09-23,4500.0
+NCR-0333,Piping,Workmanship,2026-04-30,2026-05-08,9300.0
+NCR-0334,Piping,Weld defect,2026-02-22,2026-03-03,4000.0
+NCR-0335,Civil,Weld defect,2026-03-21,2026-04-26,11800.0
+NCR-0336,Structural,Supplier material defect,2024-09-19,2024-09-28,3500.0
+NCR-0337,Architectural,Workmanship,2026-02-13,2026-03-16,36200.0
+NCR-0338,Structural,Workmanship,2026-02-26,2026-03-29,2300.0
+NCR-0339,Architectural,Weld defect,2025-03-04,2025-03-13,9900.0
+NCR-0340,Mechanical,Supplier material defect,2026-03-25,2026-04-10,7500.0
+NCR-0341,Structural,Supplier material defect,2025-12-24,2026-01-22,10300.0
+NCR-0342,Electrical,Inspection hold missed,2024-09-08,2024-10-02,11600.0
+NCR-0343,Piping,Workmanship,2026-06-13,2026-06-28,70500.0
+NCR-0344,Piping,Weld defect,2026-03-26,2026-04-24,9600.0
+NCR-0345,Electrical,Wrong revision used,2025-06-30,2025-08-14,4700.0
+NCR-0346,Mechanical,Workmanship,2025-11-18,2026-01-03,22900.0
+NCR-0347,Mechanical,Wrong revision used,2025-09-19,2025-09-23,13300.0
+NCR-0348,Structural,Supplier material defect,2026-06-16,2026-06-24,12800.0
+NCR-0349,Piping,Supplier material defect,2024-10-17,2024-10-19,10500.0
+NCR-0350,Civil,Workmanship,2025-05-30,2025-07-28,10200.0
+NCR-0351,Piping,Weld defect,2025-07-10,2025-08-23,16600.0
+NCR-0352,Fire Protection,Wrong revision used,2024-12-03,2024-12-09,6700.0
+NCR-0353,Electrical,Inspection hold missed,2025-04-02,2025-04-11,30900.0
+NCR-0354,Piping,Weld defect,2026-04-27,2026-05-11,158300.0
+NCR-0355,Electrical,Weld defect,2025-09-21,2025-10-31,7800.0
+NCR-0356,Electrical,Weld defect,2026-05-24,2026-06-22,13100.0
+NCR-0357,Piping,Workmanship,2024-09-16,2024-09-27,24500.0
+NCR-0358,I&C,Workmanship,2025-05-31,2025-06-08,34000.0
+NCR-0359,I&C,Workmanship,2026-05-23,2026-06-18,25500.0
+NCR-0360,Mechanical,Workmanship,2024-11-20,2025-01-11,5700.0
+NCR-0361,Electrical,Supplier material defect,2025-03-07,2025-03-26,2800.0
+NCR-0362,Electrical,Inspection hold missed,2024-11-16,2025-01-02,3400.0
+NCR-0363,Structural,Workmanship,2024-10-11,2024-12-07,31200.0
+NCR-0364,Electrical,Weld defect,2025-08-31,2025-10-19,9700.0
+NCR-0365,Piping,Torque or bolting,2026-03-25,,7300.0
+NCR-0366,Mechanical,Workmanship,2026-06-11,,10000.0
+NCR-0367,Mechanical,Workmanship,2026-01-09,2026-01-18,26000.0
+NCR-0368,I&C,Supplier material defect,2024-09-21,2024-10-13,73700.0
+NCR-0369,Mechanical,Workmanship,2025-12-26,2026-01-15,7300.0
+NCR-0370,Electrical,Torque or bolting,2025-02-26,2025-04-02,5100.0
+NCR-0371,Mechanical,Workmanship,2025-11-27,2025-12-15,20800.0
+NCR-0372,Architectural,Damage in handling,2025-09-30,2025-10-24,20200.0
+NCR-0373,Civil,Workmanship,2024-12-28,2025-02-16,8700.0
+NCR-0374,Civil,Supplier material defect,2025-09-07,2025-10-19,29700.0
+NCR-0375,Architectural,Workmanship,2025-08-09,2025-09-15,20800.0
+NCR-0376,Architectural,Workmanship,2025-03-10,2025-03-18,5500.0
+NCR-0377,Architectural,Wrong revision used,2025-06-12,2025-07-01,11700.0
+NCR-0378,Architectural,Workmanship,2025-08-26,2025-09-05,44000.0
+NCR-0379,Mechanical,Inspection hold missed,2025-01-26,2025-03-24,38400.0
+NCR-0380,Piping,Wrong revision used,2025-10-21,2025-10-30,18000.0

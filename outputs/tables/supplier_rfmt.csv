@@ -1,0 +1,141 @@
+supplier_id,category,recency_days,frequency,monetary,tenure_days,otd_pct,r,f,m,t,rfmt_code,segment
+SUP-118,Cleanroom Systems,122,1,33900.0,122,100.0,2,1,1,1,2111,Dormant
+SUP-033,Construction Services,8,3,5371800.0,144,100.0,5,2,3,1,5231,New and active
+SUP-052,Structural Steel,122,3,3931400.0,148,66.7,2,1,3,1,2131,Dormant
+SUP-101,HVAC & Air Handling,174,1,85900.0,174,100.0,2,1,1,1,2111,Dormant
+SUP-034,Structural Steel,92,2,247800.0,189,100.0,2,1,1,1,2111,Dormant
+SUP-015,Electrical Equipment,12,6,5623800.0,197,100.0,5,3,3,1,5331,New and active
+SUP-082,Exhaust & Abatement,39,4,3053700.0,219,100.0,4,2,2,1,4221,New and active
+SUP-136,HVAC & Air Handling,225,1,637000.0,225,,1,1,1,1,1111,Dormant
+SUP-090,Construction Services,44,3,1443400.0,226,100.0,4,1,2,1,4121,New and active
+SUP-040,Instrumentation,144,3,5550100.0,287,100.0,2,2,3,1,2231,Dormant
+SUP-072,Exhaust & Abatement,10,5,13746000.0,307,100.0,5,3,4,1,5341,New and active
+SUP-097,Exhaust & Abatement,56,13,84065300.0,312,88.9,3,5,5,1,3551,Strategic
+SUP-018,Cleanroom Systems,131,7,3839100.0,316,66.7,2,3,3,1,2331,Core tactical
+SUP-028,Structural Steel,65,9,7338200.0,328,100.0,3,4,4,1,3441,Strategic
+SUP-117,Concrete & Rebar,75,6,1733700.0,330,100.0,3,3,2,1,3321,Core tactical
+SUP-014,UPW Systems,116,4,652800.0,348,100.0,2,2,1,1,2211,Dormant
+SUP-089,Cleanroom Systems,183,7,3431300.0,353,100.0,2,3,2,1,2321,Core tactical
+SUP-024,Cleanroom Systems,56,3,1317100.0,361,100.0,3,1,1,1,3111,Core tactical
+SUP-085,Process Piping & Valves,261,4,29930400.0,362,50.0,1,2,5,1,1251,"High value, going quiet"
+SUP-128,Cleanroom Systems,48,6,2312000.0,369,100.0,4,3,2,1,4321,New and active
+SUP-099,HVAC & Air Handling,192,3,5206500.0,385,66.7,1,2,3,1,1231,Dormant
+SUP-069,Electrical Equipment,70,2,1203300.0,408,100.0,3,1,1,1,3111,Core tactical
+SUP-021,Electrical Equipment,184,3,1128400.0,413,100.0,2,1,1,1,2111,Dormant
+SUP-022,Construction Services,240,4,3873100.0,426,75.0,1,2,3,1,1231,Dormant
+SUP-020,Electrical Equipment,61,8,14260100.0,429,42.9,3,4,4,1,3441,Strategic
+SUP-137,Process Piping & Valves,50,8,6640600.0,435,100.0,3,4,3,1,3431,Core tactical
+SUP-049,Concrete & Rebar,13,7,925500.0,440,83.3,5,3,1,1,5311,New and active
+SUP-135,Cleanroom Systems,55,4,2993700.0,444,66.7,3,2,2,1,3221,Core tactical
+SUP-134,Instrumentation,4,26,19236500.0,444,80.0,5,5,4,2,5542,Strategic
+SUP-066,Cleanroom Systems,21,6,2727500.0,446,80.0,5,3,2,2,5322,New and active
+SUP-027,Exhaust & Abatement,7,4,3007300.0,446,66.7,5,2,2,2,5222,New and active
+SUP-091,UPW Systems,39,3,1612900.0,455,50.0,4,1,2,2,4122,New and active
+SUP-127,Electrical Equipment,170,3,1244600.0,455,66.7,2,1,1,2,2112,Dormant
+SUP-094,HVAC & Air Handling,256,4,9614200.0,456,100.0,1,2,4,2,1242,"High value, going quiet"
+SUP-048,Process Piping & Valves,7,87,324033700.0,460,75.4,5,5,5,2,5552,Strategic
+SUP-029,Concrete & Rebar,35,4,1409000.0,465,100.0,4,2,2,2,4222,New and active
+SUP-140,Construction Services,143,5,6199000.0,471,100.0,2,3,3,2,2332,Core tactical
+SUP-079,Electrical Equipment,43,10,17041700.0,481,42.9,4,4,4,2,4442,Strategic
+SUP-017,Construction Services,30,8,2121200.0,483,83.3,4,4,2,2,4422,New and active
+SUP-044,UPW Systems,261,4,15602800.0,484,100.0,1,2,4,2,1242,"High value, going quiet"
+SUP-039,Concrete & Rebar,39,7,2511800.0,486,85.7,4,3,2,2,4322,New and active
+SUP-058,Electrical Equipment,285,4,1968100.0,501,50.0,1,2,2,2,1222,Dormant
+SUP-071,Exhaust & Abatement,214,5,3531900.0,505,100.0,1,3,2,2,1322,Core tactical
+SUP-032,Cleanroom Systems,196,2,240800.0,509,100.0,1,1,1,2,1112,Dormant
+SUP-047,UPW Systems,168,4,5382300.0,511,75.0,2,2,3,2,2232,Dormant
+SUP-056,Concrete & Rebar,34,4,1090300.0,515,75.0,4,2,1,2,4212,New and active
+SUP-112,Construction Services,49,7,6078500.0,521,71.4,3,3,3,2,3332,Core tactical
+SUP-054,Process Piping & Valves,26,7,7277700.0,523,60.0,4,3,4,2,4342,New and active
+SUP-109,Construction Services,262,3,3017600.0,528,33.3,1,1,2,2,1122,Dormant
+SUP-078,Construction Services,4,12,11089900.0,528,100.0,5,4,4,2,5442,Strategic
+SUP-080,Instrumentation,61,2,335900.0,529,100.0,3,1,1,2,3112,Core tactical
+SUP-006,Exhaust & Abatement,1,6,5230800.0,530,80.0,5,3,3,2,5332,New and active
+SUP-043,HVAC & Air Handling,83,10,14957500.0,536,71.4,3,4,4,2,3442,Strategic
+SUP-130,Exhaust & Abatement,93,8,12473200.0,537,71.4,2,4,4,2,2442,"High value, going quiet"
+SUP-131,Cleanroom Systems,421,2,1094000.0,540,100.0,1,1,1,2,1112,Dormant
+SUP-045,Instrumentation,50,9,3143700.0,541,100.0,3,4,2,2,3422,Core tactical
+SUP-105,Concrete & Rebar,36,5,732300.0,543,40.0,4,2,1,3,4213,Core tactical
+SUP-038,Cleanroom Systems,38,11,16164200.0,550,100.0,4,4,4,3,4443,Strategic
+SUP-108,Construction Services,100,2,341000.0,553,0.0,2,1,1,3,2113,Dormant
+SUP-053,Construction Services,63,10,21529000.0,554,80.0,3,4,5,3,3453,Strategic
+SUP-001,Concrete & Rebar,20,4,1266500.0,557,100.0,5,2,1,3,5213,Core tactical
+SUP-092,HVAC & Air Handling,14,17,41220200.0,560,70.0,5,5,5,3,5553,Strategic
+SUP-026,Structural Steel,9,15,13638500.0,570,100.0,5,5,4,3,5543,Strategic
+SUP-116,Electrical Equipment,133,6,5470100.0,577,60.0,2,3,3,3,2333,Core tactical
+SUP-046,HVAC & Air Handling,581,1,281100.0,581,100.0,1,1,1,3,1113,Dormant
+SUP-125,Cleanroom Systems,99,3,2502900.0,582,50.0,2,1,2,3,2123,Dormant
+SUP-065,Construction Services,233,2,1501200.0,584,100.0,1,1,2,3,1123,Dormant
+SUP-005,Exhaust & Abatement,33,21,20068100.0,585,100.0,4,5,5,3,4553,Strategic
+SUP-011,Cleanroom Systems,120,16,23128200.0,603,60.0,2,5,5,3,2553,"High value, going quiet"
+SUP-139,Electrical Equipment,14,12,18477900.0,609,90.9,5,4,4,3,5443,Strategic
+SUP-025,Electrical Equipment,74,5,5360000.0,614,50.0,3,3,3,3,3333,Core tactical
+SUP-059,Construction Services,68,14,21866100.0,614,76.9,3,5,5,3,3553,Strategic
+SUP-100,Construction Services,104,7,5577100.0,630,71.4,2,3,3,3,2333,Core tactical
+SUP-057,UPW Systems,142,3,354600.0,635,66.7,2,1,1,3,2113,Dormant
+SUP-096,Instrumentation,323,2,289900.0,641,100.0,1,1,1,3,1113,Dormant
+SUP-064,Process Piping & Valves,28,7,718800.0,642,100.0,4,3,1,3,4313,Core tactical
+SUP-031,Process Piping & Valves,13,5,2991900.0,645,100.0,5,2,2,3,5223,Core tactical
+SUP-061,Exhaust & Abatement,26,12,11514000.0,646,88.9,4,4,4,3,4443,Strategic
+SUP-004,Exhaust & Abatement,29,6,2635400.0,652,40.0,4,3,2,3,4323,Core tactical
+SUP-012,HVAC & Air Handling,10,9,15453800.0,653,71.4,5,4,4,3,5443,Strategic
+SUP-068,Process Piping & Valves,49,7,4372200.0,660,66.7,4,3,3,3,4333,Core tactical
+SUP-102,Construction Services,34,5,661300.0,665,80.0,4,2,1,3,4213,Core tactical
+SUP-036,Cleanroom Systems,346,7,36635800.0,667,57.1,1,4,5,3,1453,"High value, going quiet"
+SUP-126,UPW Systems,89,6,3967600.0,671,100.0,2,3,3,3,2333,Core tactical
+SUP-042,Process Piping & Valves,31,4,8871300.0,676,66.7,4,2,4,4,4244,Core tactical
+SUP-076,Cleanroom Systems,180,5,3913800.0,677,80.0,2,3,3,4,2334,Core tactical
+SUP-081,UPW Systems,118,4,2569000.0,677,100.0,2,2,2,4,2224,Dormant
+SUP-083,Concrete & Rebar,5,53,71968900.0,679,77.8,5,5,5,4,5554,Strategic
+SUP-060,Construction Services,28,10,15091100.0,683,100.0,4,4,4,4,4444,Strategic
+SUP-009,Construction Services,301,5,6812800.0,684,40.0,1,3,3,4,1334,Core tactical
+SUP-115,Concrete & Rebar,2,59,103221700.0,685,84.6,5,5,5,4,5554,Strategic
+SUP-062,Concrete & Rebar,116,9,1278100.0,693,88.9,2,4,1,4,2414,Core tactical
+SUP-111,Construction Services,557,3,4380800.0,704,66.7,1,1,3,4,1134,Dormant
+SUP-122,Construction Services,704,1,169000.0,704,100.0,1,1,1,4,1114,Dormant
+SUP-067,Process Piping & Valves,222,3,2994900.0,704,66.7,1,1,2,4,1124,Dormant
+SUP-087,Instrumentation,715,1,210500.0,715,100.0,1,1,1,4,1114,Dormant
+SUP-138,Cleanroom Systems,47,5,2331300.0,715,50.0,4,2,2,4,4224,Core tactical
+SUP-084,HVAC & Air Handling,80,4,9686600.0,715,66.7,3,2,4,4,3244,Core tactical
+SUP-124,Structural Steel,70,6,7091100.0,716,60.0,3,3,4,4,3344,Core tactical
+SUP-013,Cleanroom Systems,28,25,84962300.0,718,65.2,4,5,5,4,4554,Strategic
+SUP-106,Construction Services,9,10,9900000.0,721,100.0,5,4,4,4,5444,Strategic
+SUP-037,Structural Steel,436,7,3894400.0,721,57.1,1,3,3,4,1334,Core tactical
+SUP-074,Electrical Equipment,312,8,5926400.0,724,100.0,1,4,3,4,1434,Core tactical
+SUP-123,HVAC & Air Handling,81,8,11564900.0,726,71.4,3,4,4,4,3444,Strategic
+SUP-133,Instrumentation,64,8,4468200.0,726,100.0,3,4,3,4,3434,Core tactical
+SUP-121,UPW Systems,80,5,3688300.0,730,75.0,3,3,3,4,3334,Core tactical
+SUP-129,Exhaust & Abatement,37,7,14222000.0,731,85.7,4,3,4,4,4344,Core tactical
+SUP-095,HVAC & Air Handling,52,10,6235800.0,734,87.5,3,4,3,4,3434,Core tactical
+SUP-035,Electrical Equipment,29,17,23762800.0,740,100.0,4,5,5,4,4554,Strategic
+SUP-055,Instrumentation,83,7,1886000.0,742,85.7,3,3,2,4,3324,Core tactical
+SUP-063,Electrical Equipment,23,56,200552600.0,745,98.0,5,5,5,4,5554,Strategic
+SUP-110,Cleanroom Systems,202,14,14751000.0,748,50.0,1,5,4,4,1544,"High value, going quiet"
+SUP-093,Cleanroom Systems,49,4,2929500.0,748,66.7,3,2,2,5,3225,Core tactical
+SUP-003,Exhaust & Abatement,96,3,1689000.0,749,50.0,2,1,2,5,2125,Dormant
+SUP-120,Exhaust & Abatement,313,5,1732600.0,750,80.0,1,2,2,5,1225,Dormant
+SUP-007,HVAC & Air Handling,54,17,38244400.0,758,100.0,3,5,5,5,3555,Strategic
+SUP-002,UPW Systems,13,19,29824000.0,759,100.0,5,5,5,5,5555,Strategic
+SUP-077,Instrumentation,5,216,669286100.0,762,86.1,5,5,5,5,5555,Strategic
+SUP-088,Process Piping & Valves,10,15,22702200.0,763,90.9,5,5,5,5,5555,Strategic
+SUP-075,Cleanroom Systems,64,8,6084100.0,765,100.0,3,4,3,5,3435,Core tactical
+SUP-030,Structural Steel,103,23,28246500.0,770,72.7,2,5,5,5,2555,"High value, going quiet"
+SUP-113,Process Piping & Valves,26,9,8045400.0,773,100.0,4,4,4,5,4445,Strategic
+SUP-019,Process Piping & Valves,25,44,151805600.0,798,60.0,4,5,5,5,4555,Strategic
+SUP-086,Exhaust & Abatement,345,4,6159500.0,805,100.0,1,2,3,5,1235,Dormant
+SUP-114,Structural Steel,51,12,8549500.0,812,63.6,3,4,4,5,3445,Strategic
+SUP-041,Instrumentation,50,10,12928200.0,815,77.8,3,4,4,5,3445,Strategic
+SUP-098,Concrete & Rebar,55,29,30325000.0,817,82.8,3,5,5,5,3555,Strategic
+SUP-051,Structural Steel,236,3,1144200.0,824,100.0,1,1,1,5,1115,Dormant
+SUP-023,Structural Steel,12,22,23789100.0,826,100.0,5,5,5,5,5555,Strategic
+SUP-008,Construction Services,214,5,997500.0,827,100.0,1,2,1,5,1215,Dormant
+SUP-104,UPW Systems,38,5,2639800.0,831,50.0,4,2,2,5,4225,Core tactical
+SUP-016,Instrumentation,13,9,4842500.0,836,87.5,5,4,3,5,5435,Core tactical
+SUP-050,Concrete & Rebar,815,3,62500.0,838,100.0,1,1,1,5,1115,Dormant
+SUP-103,Instrumentation,25,13,20012600.0,853,58.3,5,5,5,5,5555,Strategic
+SUP-119,Instrumentation,23,31,23429600.0,854,93.1,5,5,5,5,5555,Strategic
+SUP-073,Concrete & Rebar,6,51,60423000.0,857,81.3,5,5,5,5,5555,Strategic
+SUP-010,Cleanroom Systems,149,11,57018900.0,862,77.8,2,4,5,5,2455,"High value, going quiet"
+SUP-132,Electrical Equipment,34,36,106711400.0,864,90.6,4,5,5,5,4555,Strategic
+SUP-107,Concrete & Rebar,103,16,17824500.0,868,100.0,2,5,4,5,2545,"High value, going quiet"
+SUP-070,Process Piping & Valves,153,17,38987900.0,870,81.3,2,5,5,5,2555,"High value, going quiet"

@@ -1,0 +1,9 @@
+discipline,rfis,share_pct,median_response_days,on_time_pct,open_rfis,cost_impact_rfis
+Piping,411,22.2,11.0,44.1,14,66
+Mechanical,328,17.7,8.0,62.5,3,44
+Electrical,285,15.4,10.0,47.9,5,46
+Structural,267,14.4,8.0,56.7,4,50
+Civil,198,10.7,8.0,60.5,3,36
+I&C,172,9.3,10.0,49.7,5,28
+Architectural,107,5.8,7.0,61.7,0,13
+Fire Protection,81,4.4,6.0,65.4,3,13

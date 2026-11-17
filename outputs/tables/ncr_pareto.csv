@@ -1,0 +1,8 @@
+cause,ncrs,rework_cost_kusd,cum_cost_pct,open_ncrs
+Workmanship,123,3315.0,38.1,5
+Wrong revision used,59,1411.0,54.3,1
+Supplier material defect,72,1344.0,69.8,5
+Weld defect,43,941.0,80.6,1
+Inspection hold missed,42,772.0,89.4,0
+Torque or bolting,20,468.0,94.8,1
+Damage in handling,21,452.0,100.0,1
