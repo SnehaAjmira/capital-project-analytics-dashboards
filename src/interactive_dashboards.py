@@ -67,7 +67,7 @@ def hbar(y, x, title, colors, text=None, suffix="", vline=None):
     if vline is not None:
         f.add_vline(x=vline, line_dash="dash", line_color=style.TEXT_2, line_width=1)
     f = layout(f, title, h=380)
-    f.update_xaxes(showgrid=True, gridcolor=style.GRID, ticksuffix=suffix)
+    f.update_xaxes(showgrid=True, gridcolor=style.GRID, ticksuffix=suffix, range=[0, float(max(x)) * 1.45])
     f.update_yaxes(showgrid=False)
     return f
 
@@ -196,7 +196,7 @@ def build_all(k):
     g = s.pivot_table(index="r", columns="m", values="supplier_id", aggfunc="count").reindex(index=[5, 4, 3, 2, 1], columns=[1, 2, 3, 4, 5]).fillna(0)
     p2 = go.Figure(go.Heatmap(z=g.values, x=[f"M{c}" for c in g.columns], y=[f"R{i}" for i in g.index], colorscale="Blues",
                               text=g.values.astype(int), texttemplate="%{text}", hovertemplate="%{y} %{x}: %{z} suppliers<extra></extra>"))
-    p2 = layout(p2, "RFMT grid: suppliers by recency (R) and monetary (M) score").update_xaxes(title="Monetary score (5 = highest spend)").update_yaxes(title="Recency score (5 = most recent)", showgrid=False)
+    p2 = layout(p2, "RFMT grid: suppliers by recency (R) and monetary (M) score").update_xaxes(title="Monetary score (5 = highest spend)").update_yaxes(title="Recency score (5 = most recent)", showgrid=False, autorange="reversed")
     p3 = go.Figure(go.Scatter(x=s.frequency, y=s.monetary / 1e6, mode="markers", marker=dict(size=9, color=B, opacity=0.7, line=dict(color="#fff", width=1)),
                               customdata=s[["supplier_id", "segment", "rfmt_code", "otd_pct"]],
                               hovertemplate="%{customdata[0]}<br>Segment: %{customdata[1]}<br>RFMT: %{customdata[2]}<br>POs: %{x}<br>Spend: $%{y:,.1f}M<br>OTD: %{customdata[3]}%<extra></extra>"))
