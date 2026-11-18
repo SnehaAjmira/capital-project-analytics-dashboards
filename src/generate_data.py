@@ -1,8 +1,8 @@
 """
 generate_data.py
 
-Builds a SYNTHETIC dataset for a semiconductor fab EPC (engineering,
-procurement, construction) project. All values are randomly generated from a
+Builds a SYNTHETIC dataset for a semiconductor fab construction project (engineering,
+procurement and construction). All values are randomly generated from a
 fixed seed. No real project, client, or company data is used.
 
 Output: data/*.csv

@@ -1,14 +1,14 @@
-# EPC Project Analytics Dashboards
+# Capital Project Analytics Dashboards
 
-Five project dashboards for a large semiconductor fab EPC (engineering, procurement, construction) project, covering the reporting a project information and analytics team delivers to project leadership: earned value, engineering deliverables, RFIs, supplier performance with RFMT segmentation, and construction quality and completion.
+Five project dashboards for a large semiconductor fab construction project (engineering, procurement and construction), covering the reporting a project information and analytics team delivers to project leadership: earned value, engineering deliverables, RFIs, supplier performance with RFMT segmentation, and construction quality and completion.
 
-**Live interactive dashboards:** https://snehaajmira.github.io/epc-project-analytics-dashboards/
+**Live interactive dashboards:** https://snehaajmira.github.io/capital-project-analytics-dashboards/
 
-**Advanced analysis report:** [REPORT.md](REPORT.md) ([web version](https://snehaajmira.github.io/epc-project-analytics-dashboards/analysis-report.html)). An 8-level analysis from data profiling to Monte Carlo simulation, survival analysis, machine learning, and prescriptive recommendations.
+**Advanced analysis report:** [REPORT.md](REPORT.md) ([web version](https://snehaajmira.github.io/capital-project-analytics-dashboards/analysis-report.html)). An 8-level analysis from data profiling to Monte Carlo simulation, survival analysis, machine learning, and prescriptive recommendations.
 
 | | |
 |---|---|
-| **Industry** | EPC / capital projects (semiconductor fab) |
+| **Industry** | Capital projects (semiconductor fab) |
 | **Tools** | SQL (DuckDB), Python, pandas, matplotlib, Plotly, GitHub Pages |
 | **Analyses** | Earned value (CPI, SPI, EAC, VAC), S-curves, Pareto (80/20), ABC classification, RFMT supplier segmentation, aging analysis, burndown forecasting |
 | **Data** | Synthetic, generated from a fixed seed (see Section 5). 13,800 records across 7 tables. Data date 30 Jun 2026. |
@@ -19,11 +19,11 @@ Five project dashboards for a large semiconductor fab EPC (engineering, procurem
 
 | # | Dashboard | Audience | Analyses | Interactive |
 |---|---|---|---|---|
-| 1 | Project Controls | Project manager, project controls | S-curve, CPI/SPI trend, variance by area, EAC vs BAC | [Open](https://snehaajmira.github.io/epc-project-analytics-dashboards/project-controls.html) |
-| 2 | Engineering and Document Control | Engineering manager, document control | Deliverable progress, first-time approval, days late, overdue aging | [Open](https://snehaajmira.github.io/epc-project-analytics-dashboards/engineering.html) |
-| 3 | RFI Management | Construction and engineering leads | Monthly flow, Pareto by discipline, on-time response, open aging | [Open](https://snehaajmira.github.io/epc-project-analytics-dashboards/rfi.html) |
-| 4 | Procurement and Supplier RFMT | Procurement, supply chain | Spend Pareto, ABC classes, RFMT grid and segments, on-time delivery | [Open](https://snehaajmira.github.io/epc-project-analytics-dashboards/procurement.html) |
-| 5 | Quality and Completion | Construction, quality, commissioning | Punch Pareto, burndown with forecast, Category A by system, NCR Pareto | [Open](https://snehaajmira.github.io/epc-project-analytics-dashboards/quality.html) |
+| 1 | Project Controls | Project manager, project controls | S-curve, CPI/SPI trend, variance by area, EAC vs BAC | [Open](https://snehaajmira.github.io/capital-project-analytics-dashboards/project-controls.html) |
+| 2 | Engineering and Document Control | Engineering manager, document control | Deliverable progress, first-time approval, days late, overdue aging | [Open](https://snehaajmira.github.io/capital-project-analytics-dashboards/engineering.html) |
+| 3 | RFI Management | Construction and engineering leads | Monthly flow, Pareto by discipline, on-time response, open aging | [Open](https://snehaajmira.github.io/capital-project-analytics-dashboards/rfi.html) |
+| 4 | Procurement and Supplier RFMT | Procurement, supply chain | Spend Pareto, ABC classes, RFMT grid and segments, on-time delivery | [Open](https://snehaajmira.github.io/capital-project-analytics-dashboards/procurement.html) |
+| 5 | Quality and Completion | Construction, quality, commissioning | Punch Pareto, burndown with forecast, Category A by system, NCR Pareto | [Open](https://snehaajmira.github.io/capital-project-analytics-dashboards/quality.html) |
 
 ## 2. Advanced Analysis Report
 
@@ -147,7 +147,7 @@ python -m unittest discover -s tests -v
 ## 8. Repository Structure
 
 ```
-epc-project-analytics-dashboards/
+capital-project-analytics-dashboards/
 ├── data/                       # synthetic source tables (CSV)
 ├── sql/
 │   ├── 00_staging.sql

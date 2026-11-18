@@ -79,7 +79,7 @@ def page(slug, title, kpis, figs):
     charts = "".join(f'<div class="card">{pio.to_html(f, include_plotlyjs=False, full_html=False, config={"displaylogo": False})}</div>'
                      for f in figs)
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{title} | EPC Project Analytics</title><script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script><style>{CSS}</style></head>
+<title>{title} | Capital Project Analytics</title><script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script><style>{CSS}</style></head>
 <body><header><h1>{title}</h1><span class="note">Synthetic data for demonstration. Data date: 30 Jun 2026. <a href="index.html">All dashboards</a> | <a href="analysis-report.html">Analysis report</a></span></header>
 <nav>{nav}</nav><section class="kpis">{cards}</section><section class="grid">{charts}</section></body></html>"""
     (DOCS / f"{slug}.html").write_text(html, encoding="utf-8")
@@ -89,9 +89,9 @@ def index():
     cards = "".join(f'<a href="{s}.html"><img src="img/{i + 1:02d}.png" alt="{t}"><h3>{t}</h3><p>{d}</p></a>'
                     for i, (s, t, d) in enumerate(PAGES))
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EPC Project Analytics Dashboards</title><style>{CSS}</style></head><body>
-<header><h1>EPC Project Analytics Dashboards</h1><span class="note">Semiconductor fab EPC project. Synthetic data. Data date: 30 Jun 2026.</span></header>
-<nav><a href="analysis-report.html">Advanced analysis report (8 levels, descriptive to predictive)</a> <a href="https://github.com/SnehaAjmira/epc-project-analytics-dashboards">Source code and SQL</a></nav>
+<title>Capital Project Analytics Dashboards</title><style>{CSS}</style></head><body>
+<header><h1>Capital Project Analytics Dashboards</h1><span class="note">Semiconductor fab construction project. Synthetic data. Data date: 30 Jun 2026.</span></header>
+<nav><a href="analysis-report.html">Advanced analysis report (8 levels, descriptive to predictive)</a> <a href="https://github.com/SnehaAjmira/capital-project-analytics-dashboards">Source code and SQL</a></nav>
 <section class="cards">{cards}</section></body></html>"""
     (DOCS / "index.html").write_text(html, encoding="utf-8")
 

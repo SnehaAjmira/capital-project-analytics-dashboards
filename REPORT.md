@@ -1,6 +1,6 @@
-# EPC Project Analysis Report: From Descriptive to Predictive
+# Capital Project Analysis Report: From Descriptive to Predictive
 
-End-to-end analysis of a semiconductor fab EPC project, building from data profiling to simulation, survival analysis, and machine learning. Each level answers a harder question than the one before it.
+End-to-end analysis of a semiconductor fab construction project, building from data profiling to simulation, survival analysis, and machine learning. Each level answers a harder question than the one before it.
 
 | | |
 |---|---|

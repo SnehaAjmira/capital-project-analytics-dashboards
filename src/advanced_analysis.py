@@ -1,7 +1,7 @@
 """
 advanced_analysis.py
 
-End-to-end analysis of the EPC project data, from simple to complex:
+End-to-end analysis of the capital project data, from simple to complex:
   L1  Data profiling and quality checks
   L2  Diagnostic statistics (chi-square, Kruskal-Wallis, Spearman)
   L3  Earned schedule and EAC methods
@@ -38,7 +38,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FIG = ROOT / "analysis" / "figures"
 TAB = ROOT / "analysis" / "tables"
 DATA_DATE = pd.Timestamp("2026-06-30")
-SRC = "Synthetic EPC project data. Data date 30 Jun 2026."
+SRC = "Synthetic capital project data. Data date 30 Jun 2026."
 B, O, A, Y, N = style.SERIES[0], style.SERIES[1], style.SERIES[2], style.SERIES[3], style.NEUTRAL
 rng = np.random.default_rng(7)
 R = {}  # results for the report

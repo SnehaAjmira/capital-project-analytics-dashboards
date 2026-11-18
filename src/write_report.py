@@ -50,9 +50,9 @@ def build(fig_prefix):
     dr_segments, dr_strategic = int((dr > 0).sum()), int(dr.get("Strategic", 0))
     worst = L2["worst_code3"]
 
-    return f"""# EPC Project Analysis Report: From Descriptive to Predictive
+    return f"""# Capital Project Analysis Report: From Descriptive to Predictive
 
-End-to-end analysis of a semiconductor fab EPC project, building from data profiling to simulation, survival analysis, and machine learning. Each level answers a harder question than the one before it.
+End-to-end analysis of a semiconductor fab construction project, building from data profiling to simulation, survival analysis, and machine learning. Each level answers a harder question than the one before it.
 
 | | |
 |---|---|
@@ -260,8 +260,8 @@ table{{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;backgrou
 th{{background:#f3f3f1}} img{{max-width:100%;border:1px solid {style.GRID};border-radius:6px;background:#fff;margin:8px 0}}
 code{{background:#f0efec;padding:1px 5px;border-radius:4px}} nav{{font-size:13px;margin-bottom:8px}} nav a{{color:{style.SERIES[0]}}}"""
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EPC Project Analysis Report</title><style>{css}</style></head><body><main>
-<nav><a href="index.html">Dashboards</a> | <a href="https://github.com/SnehaAjmira/epc-project-analytics-dashboards">Source code</a></nav>{body}</main></body></html>"""
+<title>Capital Project Analysis Report</title><style>{css}</style></head><body><main>
+<nav><a href="index.html">Dashboards</a> | <a href="https://github.com/SnehaAjmira/capital-project-analytics-dashboards">Source code</a></nav>{body}</main></body></html>"""
     (docs / "analysis-report.html").write_text(html, encoding="utf-8")
     print("Wrote REPORT.md and docs/analysis-report.html")
 
